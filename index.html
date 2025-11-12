@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUTTY SCIENTIST</title>
+
+  <style>
+    /* ---------- GLOBAL COLORS & FONTS ---------- */
+    :root {
+      --primary: #c2389d;
+      --secondary: #4a00e0;
+      --bg: #f9fafc;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---------- HEADER & NAVIGATION ---------- */
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .brand {
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4e5ada;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px 30px;
+      margin: 40px 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    form {
+      display: grid;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 4px rgba(142, 45, 226, 0.3);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+      }
+      .hero div {
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">KUTTY SCIENTIST</div>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+      <div>
+        <h1>Welcome to KUTTY SCIENTIST</h1>
+        <p><b>Head Founder: DHESIGAN RATHINAVEL BE,MB,.ph(d)</b></p>
+        <p><b>LOCATION :Tamil Nadu , India</b></p>
+        <p>Explore my journey of creativity, innovation, and technology.  
+          I build projects that connect science and imagination into real working prototypes.</p>
+        <a class="btn" href="#about">Learn More</a>
+      </div>
+      <img src="myself.jpg" alt="Profile photo">
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Myself</h2>
+      <p>Hello! I’m a passionate learner exploring the world of web development, electronics, and Arduino.  
+        My goal is to combine creativity with technology to build smart and useful innovations.</p>
+      <img src="aboutme.jpg" alt="About" width="600px" height="600px">
+      <p>The above information is true in my honest</p>
+      <div style="text-align:center;">
+        <a class="btn" href="#projects">View My Projects →</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h2>List of My Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="footstep.jpg" alt="Portfolio">
+          <h3>FootStep PowerGenerator</h3>
+          <p>The footstep generator is made by piezoelectric sensor that produce a mechanical
+            energy into electrical energy.</p>
+        </div>
+        <div class="card">
+          <img src="b;indglass.jpg" alt="Calculator">
+          <h3>Blind Assist Glass with Bluetooth</h3>
+          <p>The project is used for only blind people and the ultrasonic sensor is used 
+             to detect the abstacles for know the objects infront of blinders to give a alarm sound.</p>
+        </div>
+        <div class="card">
+          <img src="smaethome.jpg" alt="IoT Smart Home">
+          <h3>IoT Based Smart Home systems</h3>
+          <p>An Arduino-based home automation system with sensors and alerts,It is a quick response 
+             alarm system and IOT based prototypes are added to this home automation ,it is most
+             usefull in our feature .</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:20px;">
+        <a class="btn" href="#contact">Contact Me →</a>
+      </div>
+    </section>
+    <a href="https://www.instagram.com/_dhesigan_tn29?utm_source=qr&igsh=MWxudWJseTY1ODFkcw==" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="100px" height="100px">
+</a>
+
+<a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fdhesigan-r-666626379_arduino-embedded-autocad-activity-7363589739037265921-Ixmu%3Futm_source%3Dshare%26utm_medium%3Dmember_android%26rcm%3DACoAAF2H5i4BIlXFn5f_W0n9AH3qolUZyuu-TQ8%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzunFZeDAFCzDlp8MB1MkfOEJm6moZCxcVnF1Qb5Dz0nweksE4aFUlJlQMHc_aem_L-F1Ectr4U2KuRqsvfHA4Q&e=AT2aCvw7taKxKH7DV-OkRHFuajT6rOdiI9w8KizW0mcb8o_vRcrfFR3hRwo-OnVhiv9Ci7tEq8jtaMLmUp-MrwMdcbW-jj1ff03W6TxaBZ2AN-0kWPfLRv7AhA" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="100px" height="100px">
+</a>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you’d like to collaborate, ask questions, or just say hi — drop a message below.</p>
+      <form onsubmit="event.preventDefault(); alert('Thanks for contacting! I’ll get back soon. (Demo)')">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> KUTTY SCIENTIST • Crafted with ❤️ and curiosity
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
